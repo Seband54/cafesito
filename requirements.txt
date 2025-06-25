@@ -1,6 +1,0 @@
-flask
-scikit-fuzzy
-matplotlib
-numpy
-scipy
-network
