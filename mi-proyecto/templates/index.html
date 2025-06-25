@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluador de Calidad de Café</title>
+</head>
+<body>
+    <h1>Evaluador de Calidad de Café</h1>
+
+    <form method="post">
+        <label>Acidez (pH): <input type="number" name="acidez" step="0.1" required></label><br>
+        <label>Cafeína (%): <input type="number" name="cafeina" step="0.1" required></label><br>
+        <label>Humedad (%): <input type="number" name="humedad" step="0.1" required></label><br>
+        <label>Aroma (1-10): <input type="number" name="aroma" step="0.1" required></label><br>
+        <button type="submit">Evaluar</button>
+    </form>
+
+    {% if resultado %}
+        <h2>Resultado:</h2>
+        <p>Calidad: {{ resultado.calidad }}%</p>
+        <p>Categoría: {{ resultado.categoria }}</p>
+    {% endif %}
+</body>
+</html>
